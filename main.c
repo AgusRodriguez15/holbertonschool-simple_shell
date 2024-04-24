@@ -4,7 +4,7 @@
  *
  * Return: Always 0.
  */
-int main(int ac, char **av)
+int main(void)
 {
 	char *str;
 	char **arr_toks;
@@ -22,7 +22,7 @@ int main(int ac, char **av)
 	str[strlen(str) - 1] = '\0';
 	arr_toks = tokenizar(str);
 
-	if (strcmp(str, "exit\n") == 0)
+	if (strcmp(str, "exit") == 0)
 	{
 		free(str);
 		break;

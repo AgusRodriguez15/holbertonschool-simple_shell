@@ -13,7 +13,6 @@ char **tokenizar(char *str)
 	char *delim = " ";
 	int cantToks = 0;
 	int i = 0;
-	int j = 0;
 	int b = 0;
 
 	a = strdup(str);
