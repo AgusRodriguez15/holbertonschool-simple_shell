@@ -15,7 +15,7 @@ int main(void)
 
 	while (1)
 	{
-    	printf("$shellmans ");
+    	fprintf(stderr, "$shellmans ");
 	
 	if (getline(&str, &x, stdin) == -1)
                 return 0;
