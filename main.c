@@ -6,22 +6,18 @@
  */
 int main(void)
 {
-	char *str;
-	char **arr_toks;
+	char *str, **arr_toks;
 	size_t x = 0;
 	pid_t child_pid;
 	int status;
-	extern char **environ;
 
 	while (1)
 	{
-    	printf("$shellmans ");
-	
-	if (getline(&str, &x, stdin) == -1)
-                return 0;
-	str[strlen(str) - 1] = '\0';
-	arr_toks = tokenizar(str);
-
+		printf("$shellmans ");
+		if (getline(&str, &x, stdin) == -1)
+			return (0);
+			str[strlen(str) - 1] = '\0';
+			arr_toks = tokenizar(str);
 	if (strcmp(str, "exit") == 0)
 	{
 		free(str);

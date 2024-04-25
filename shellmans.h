@@ -6,4 +6,5 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 char **tokenizar(char *str);
+extern char **environ;
 #endif
