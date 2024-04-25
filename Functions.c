@@ -1,8 +1,8 @@
 #include "shellmans.h"
 /**
  * tokenizar - 2d array
- * 
- * 
+ *
+ *
  *
  * Return: Nothing.
  */
@@ -26,7 +26,7 @@ char **tokenizar(char *str)
 		tok = strtok(NULL, delim);
 	}
 
-	ar = malloc((cantToks + 1) * sizeof(char*));
+	ar = malloc((cantToks + 1) * sizeof(char *));
 	if (ar == NULL)
 	{
 		free(a);
@@ -41,10 +41,10 @@ char **tokenizar(char *str)
 	while (token != NULL)
 	{
 
-		ar[i] = strdup(token); 
-		if (ar[i]== NULL)	
+		ar[i] = strdup(token);
+		if (ar[i] == NULL)
 		{
-			for(b = 0; b < i; b++)
+			for (b = 0; b < i; b++)
 				free(ar[b]);
 			free(a);
 			free(t);
@@ -58,12 +58,6 @@ char **tokenizar(char *str)
 
 	free(a);
 	free(t);
-	/**
-	while (ar && ar[j]) 
-	{
-		printf("%s\n", ar[j]);
-		j++;
-	}
-	*/
+
 	return (ar);
 }			
