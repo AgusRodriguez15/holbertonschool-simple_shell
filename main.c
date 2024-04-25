@@ -13,10 +13,12 @@ int main(void)
 
 	while (1)
 	{
-		if (isatty(STDIN_FILENO))
+		if(isatty(STDIN_FILENO))	
 		printf("$shellmans ");
 		if (getline(&str, &x, stdin) == -1)
+		{
 			return (0);
+		}
 			str[strlen(str) - 1] = '\0';
 			arr_toks = tokenizar(str);
 	if (strcmp(str, "exit") == 0)
